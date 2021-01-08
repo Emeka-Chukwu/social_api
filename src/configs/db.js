@@ -17,7 +17,11 @@ const connectDB = async () => {
                console.log("Connecting to database");
                console.log(process.env.DEV_MONGODB_URI);
 
+               console.log(process.env.NODE_ENV);
                 connect = await mongoose.connect(process.env.DEV_MONGODB_URI, options);
+                console.log(connect);
+               console.log("Connecting to database");
+
         console.log(`connected to MongoDB in ${process.env.NODE_ENV} mode on ${connect.connection.host}`);
 
                 break;
